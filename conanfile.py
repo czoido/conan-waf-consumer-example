@@ -9,8 +9,8 @@ base = python_requires("waf-build-helper/0.1@czoido/testing")
 class TestWafConan(base.get_conanfile()):
     settings = "os", "compiler", "build_type", "arch", "arch_build"
     generators = "Waf"
-    requires = "WafGen/0.1@czoido/testing", "mylib-waf/1.0@czoido/testing"
-    build_requires = "waf/2.0.17@czoido/testing"
+    requires = "mylib-waf/1.0@czoido/testing"
+    build_requires = "WafGen/0.1@czoido/testing", "waf/2.0.17@czoido/testing"
     exports_sources = "wscript", "main.cpp"
 
     def build(self):
