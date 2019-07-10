@@ -1,8 +1,6 @@
 #! /usr/bin/env python
 # encoding: utf-8
 
-import os
-
 top = '.'
 out = 'build'
 
@@ -15,5 +13,4 @@ def configure(conf):
 	conf.load('waf_conan_toolchain', tooldir='.')
 
 def build(bld):
-	print(bld.env)
 	bld.program(source='main.cpp', target='test_package', use=bld.env.CONAN_LIBS)
