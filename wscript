@@ -3,12 +3,8 @@
 
 import os
 
-VERSION = '1.0.0'
-APPNAME = 'test_package'
-
 top = '.'
 out = 'build'
-
 
 def options(opt):
 	opt.load('compiler_cxx')
