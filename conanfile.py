@@ -11,7 +11,7 @@ class TestWafConan(base.get_conanfile()):
     generators = "Waf"
     requires = "WafGen/0.1@czoido/testing", "mylib-waf/1.0@czoido/testing"
     build_requires = "waf/2.0.17@czoido/testing"
-    exports = "wscript", "main.cpp"
+    exports_sources = "wscript", "main.cpp"
 
     def build(self):
         waf = base.WafBuildEnvironment(self)
