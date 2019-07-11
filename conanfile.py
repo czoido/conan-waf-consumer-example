@@ -17,9 +17,3 @@ class TestWafConan(base.get_conanfile()):
         waf = base.WafBuildEnvironment(self)
         waf.configure()
         waf.build()
-
-    def test(self):
-        if not tools.cross_building(self.settings):
-            self._bin_path = "build"
-            self.run(os.path.join(self.source_folder, self._bin_path,
-                                  "test_package"), run_environment=True)
